@@ -7,8 +7,12 @@
             Roll: 10
             Marks: 90"
  */
-def getDetails(name, gender, roll, marks) {
+/* def getDetails(name, gender, roll, marks) {
     "Name: ${name}\nGender: ${gender}\nRoll: ${roll}\nMarks: ${marks}"
+} */
+
+def getDetails(Map map) {
+    "Name: ${map['name']}\nGender: ${map['gender']}\nRoll: ${map['roll']}\nMarks: ${map['marks']}"
 }
 
 /*
@@ -46,7 +50,17 @@ def roll = 10
 def marks = 89
 
 // call the getDetails() for the above student -- print it
-println getDetails(name, gender, roll, marks)
+// println getDetails(name, gender, roll, marks)
 
 // call the getGrade() for the above student -- print it
 println getGrade(marks)
+
+// println getDetails("jane", 'm', 18, 10)
+// println getDetails([name: 'jane', gender: 'm', roll: 18, marks: 10])
+// println getDetails([gender: 'm', marks: 10, roll: 18, name: 'jane'])
+
+// println getDetails(name: 'jane', gender: 'm', roll: 18, marks: 10)
+// println getDetails(gender: 'm', marks: 10, roll: 18, name: 'jane')
+
+def str = getDetails name: 'jane', gender: 'm', roll: 18, marks: 10
+println str

@@ -1,6 +1,7 @@
 // Every class is represented in the memory as a single object of data type Class
 // 1 Class object per class (built in classes or user define classes)
 
+// Groovy bean
 class Student {
     // instance (object) variables
     // prefer explicit data typing when declaring instance variables in a groovy class
@@ -19,6 +20,14 @@ class Student {
         // return this
      }
      */
+
+    // constructor automatically available in every groovy bean
+    /* Student(Map map) {
+        this.name = map['name']
+        this.gender = map['gender']
+        this.roll = map['roll']
+        this.marks = map['marks']
+    } */
 
     Student(String name=null, Character gender=null, Integer roll=null, Float marks=null) {
         // this ---> current object

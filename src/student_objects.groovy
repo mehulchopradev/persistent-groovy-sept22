@@ -47,3 +47,7 @@ println Student.count // 2
 def s3 = Student.newInstance('rahul', 'm' as Character, 15, 87)
 println s3.getDetails()
 
+
+def s4 = new Student(name: 'john', marks: 90, roll: 10, gender: 'm' as Character)
+println s4.getDetails()
+
