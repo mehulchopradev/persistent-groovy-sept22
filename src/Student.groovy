@@ -26,6 +26,9 @@ class Student {
         this.name = map['name']
         this.gender = map['gender']
         this.roll = map['roll']
+        // Internally
+        // this.setRoll(map['roll'])
+
         this.marks = map['marks']
     } */
 
@@ -73,5 +76,29 @@ class Student {
         }
 
         grade
+    }
+
+    // By default getter/setter methods are added to the groovy bean
+    /* def setRoll(Integer roll) {
+       this.roll = roll
+    } */
+
+    /*
+        def getRoll() {
+            this.roll
+        }
+     */
+
+    // encapsulation
+    def setRoll(Integer roll) {
+        if (roll > 0) {
+            this.roll = roll
+        }
+    }
+
+    def setGender(Character gender) {
+        if (gender == 'm' || gender == 'f') {
+            this.gender = gender;
+        }
     }
 }

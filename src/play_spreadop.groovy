@@ -32,3 +32,8 @@ def students = [
 // def names = students.name
 def names = students*.name
 println names
+
+// create a new list
+// Output of calling the getDetails() on each student object
+def l = students*.getDetails()
+println l

@@ -48,6 +48,28 @@ def s3 = Student.newInstance('rahul', 'm' as Character, 15, 87)
 println s3.getDetails()
 
 
-def s4 = new Student(name: 'john', marks: 90, roll: 10, gender: 'm' as Character)
+def s4 = new Student(name: 'john', marks: 90, roll: -10, gender: 'm' as Character)
+println s4.getDetails()
+
+s4.roll = 12
+// Internally
+// s4.setRoll(12)
+
+println s4.getDetails()
+
+println s4.roll
+// Internally
+// println s4.getRoll()
+
+s4.roll = -90
+// Internally
+// s4.setRoll(-90)
+
+println s4.getDetails()
+
+s4.gender = 'r'
+// Internally
+// s4.setGender('r')
+
 println s4.getDetails()
 
